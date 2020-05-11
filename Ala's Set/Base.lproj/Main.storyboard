@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ala_s_Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="h5f-bb-Rcm">
+                                <rect key="frame" x="10" y="30" width="355" height="627"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQw-4B-zLC" customClass="TableTopCardsView" customModule="Ala_s_Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="527"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="1500" id="1Yy-ME-czW"/>
+                                            <constraint firstAttribute="height" priority="750" constant="2000" id="bix-ew-0Rf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfCells">
+                                                <integer key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qVA-iE-sba">
+                                        <rect key="frame" x="0.0" y="527" width="355" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qo6-Yn-8RC">
+                                                <rect key="frame" x="58" y="0.0" width="239" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <state key="normal" title="Deal 3 More Cards!"/>
+                                                <connections>
+                                                    <action selector="dealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2a-Qh-7bR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-i8-b75">
+                                                <rect key="frame" x="121" y="40" width="113" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="KKf-rs-mpz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="&lt;&lt;New Game&gt;&gt;"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fo0-Vk-b47">
+                                                <rect key="frame" x="149" y="79" width="57.5" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="FW4-Lx-Ede"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="8yJ-ze-jW3"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="kHV-9Q-JEC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qVA-iE-sba" firstAttribute="top" secondItem="h5f-bb-Rcm" secondAttribute="top" priority="750" constant="10000" id="7Bb-TV-N9m"/>
+                                    <constraint firstItem="qVA-iE-sba" firstAttribute="centerX" secondItem="h5f-bb-Rcm" secondAttribute="centerX" id="hDk-lZ-TeA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qVA-iE-sba" secondAttribute="bottom" constant="10" id="Acf-lM-Ib2"/>
+                            <constraint firstItem="h5f-bb-Rcm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Bqp-Cj-gMm"/>
+                            <constraint firstItem="KQw-4B-zLC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CBc-sh-1Fu"/>
+                            <constraint firstItem="h5f-bb-Rcm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Qk5-NT-I43"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h5f-bb-Rcm" secondAttribute="trailing" constant="10" id="To4-0g-i7M"/>
+                            <constraint firstItem="h5f-bb-Rcm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W4z-Mr-RLR"/>
+                            <constraint firstItem="KQw-4B-zLC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fxr-YF-CYf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KQw-4B-zLC" secondAttribute="trailing" constant="10" id="i2O-rY-hVM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h5f-bb-Rcm" secondAttribute="bottom" constant="10" id="tQk-kV-mqd"/>
+                            <constraint firstItem="h5f-bb-Rcm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="yGS-MH-aoK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardsContainerView" destination="KQw-4B-zLC" id="wpA-qA-eUw"/>
+                        <outlet property="dealButton" destination="qo6-Yn-8RC" id="mQ8-KO-HXd"/>
+                        <outlet property="scoreLabel" destination="Fo0-Vk-b47" id="nmh-Jq-qUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="30.134932533733135"/>
+        </scene>
+    </scenes>
+</document>
